@@ -1,4 +1,4 @@
-# Navigatr
+# Navigatr [![version](https://badgen.net/npm/v/navigatr)](https://npmjs.com/package/navigatr)
 
 A utility for scraping the nostr network. Please be considerate with your limits and filters, since this will open a connection to every relay it can find.
 
