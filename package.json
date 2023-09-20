@@ -1,0 +1,47 @@
+{
+  "name": "navigatr",
+  "version": "0.0.1",
+  "description": "A utility for scraping relays",
+  "author": "hodlbod",
+  "license": "MIT",
+  "keywords": [
+    "nostr"
+  ],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coracle-social/navigatr.git"
+  },
+  "types": "./build/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/src/index.mjs",
+      "require": "./build/src/index.cjs"
+    },
+    "./types": "./build/src/index.d.ts"
+  },
+  "scripts": {
+    "pub": "npm i && npm run lint && tsc-multi && npm publish",
+    "build": "tsc-multi",
+    "clean": "gts clean",
+    "lint": "gts lint",
+    "fix": "gts fix",
+    "prepare": "yarn run build",
+    "pretest": "yarn run build",
+    "posttest": "yarn run lint"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "nostr-tools": "^1.15.0",
+    "paravel": "^0.3.5",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.6",
+    "gts": "^5.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "tsc-multi": "^1.1.0",
+    "typescript": "~5.1.6"
+  }
+}
